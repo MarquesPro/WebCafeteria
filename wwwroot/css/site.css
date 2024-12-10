@@ -1,0 +1,54 @@
+/* Estilos globais */
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: 'Arial', sans-serif; /* Escolha uma fonte padrão */
+  line-height: 1.6; /* Melhor legibilidade */
+  color: #333; /* Texto com boa legibilidade */
+  background-color: #f9f9f9; /* Fundo suave */
+}
+
+/* Estilos para botões e inputs */
+.btn:focus, 
+.btn:active:focus, 
+.btn-link.nav-link:focus, 
+.form-control:focus, 
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  outline: none; /* Remove o contorno padrão */
+  transition: box-shadow 0.2s ease-in-out; /* Adiciona suavidade */
+}
+
+/* Adicionando estilos para acessibilidade */
+:focus {
+  outline: 2px solid #258cfb;
+  outline-offset: 2px;
+}
+
+/* Variáveis CSS (opcional para facilitar mudanças futuras) */
+:root {
+  --primary-color: #258cfb;
+  --secondary-color: #f9f9f9;
+  --text-color: #333;
+  --focus-color: white;
+}
+
+/* Atualização para usar variáveis */
+.btn:focus, 
+.btn:active:focus, 
+.btn-link.nav-link:focus, 
+.form-control:focus, 
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem var(--focus-color), 0 0 0 0.25rem var(--primary-color);
+}
